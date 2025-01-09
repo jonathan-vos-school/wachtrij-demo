@@ -10,7 +10,8 @@ wachtrij = 0 # bij start van attractie]
 # hoe vaak data moet worden omgezet in bericht richting database
 overzicht_interval = 3 # in seconden
 
-
+board = Arduino(Arduino.AUTODETECT)
+board.samplingOn(100)
 
 
 def knop_1_callback(value):
@@ -65,8 +66,6 @@ nummers = {
     9: [True, True, True, True, False, True, True]
 }
 
-board = Arduino(Arduino.AUTODETECT)
-board.samplingOn(100)
 
 # Stel segmenten in als output
 for pin in segments:
